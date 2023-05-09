@@ -15,7 +15,7 @@ void free_stack(stack_t *top)
 		if (top->next)
 			free_stack(top->next);
 
-		free (top);
+		free(top);
 	}
 }
 
