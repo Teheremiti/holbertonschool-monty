@@ -20,6 +20,7 @@ void opcode(stack_t **top, char *arg, unsigned int line)
 		{"pint", pint},
 		{"pop", pop},
 		{"nop", nop},
+		{"swap", swap},
 		{NULL, NULL}
 	};
 
