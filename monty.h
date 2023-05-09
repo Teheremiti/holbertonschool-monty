@@ -49,7 +49,7 @@ typedef struct global_s
 	int status;
 } global_t;
 
-global_t global;
+extern global_t global;
 
 void free_stack(stack_t *);
 int is_num(char *);
