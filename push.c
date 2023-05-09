@@ -16,7 +16,6 @@ void push(stack_t **top, unsigned int line)
 
 	if (global.arg == NULL)
 	{
-		free_stack(*top);
 		fprintf(stderr, "L%d: usage: push integer\n", line);
 		global.status = EXIT_FAILURE;
 		return;
@@ -28,7 +27,6 @@ void push(stack_t **top, unsigned int line)
 
 	if (!is_num(num))
 	{
-		free_stack(*top);
 		fprintf(stderr, "L%d: usage: push integer\n", line);
 		global.status = EXIT_FAILURE;
 		return;
@@ -37,7 +35,6 @@ void push(stack_t **top, unsigned int line)
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
-		free_stack(*top);
 		fprintf(stderr, "Error: malloc failed\n");
 		global.status = EXIT_FAILURE;
 		return;
