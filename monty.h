@@ -60,5 +60,6 @@ void pint(stack_t **, unsigned int);
 void pop(stack_t **, unsigned int);
 void nop(stack_t **, unsigned int);
 void opcode(stack_t **, char *, unsigned int);
+void swap(stack_t **top, unsigned int i);
 
 #endif
