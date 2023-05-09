@@ -44,6 +44,6 @@ int main(int ac, char **av)
 
 	free(buffer);
 	free_stack(top);
-
+	fclose(fd);
 	return (0);
 }

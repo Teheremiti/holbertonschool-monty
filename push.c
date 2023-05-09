@@ -12,9 +12,12 @@
 void push(stack_t **top, unsigned int line)
 {
 	char *num = global.arg;
-	stack_t *new = malloc(sizeof(stack_t));
+	stack_t *new = NULL;
 
-	if (*num < '0' || *num > '9')
+	if (*num == '-')
+		num++;
+
+	if (num == NULL || is_num(num))
 	{
 		free_stack(*top);
 		fprintf(stderr, "L%d: usage: push integer\n", line);
