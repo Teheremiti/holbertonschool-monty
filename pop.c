@@ -12,7 +12,7 @@ void pop(stack_t **top, unsigned int i)
 
 	if (top == NULL)
 	{
-		fprintf(stderr, "L%d: can't pop an empty\n", i);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", i);
 		free(*top);
 		exit(EXIT_FAILURE);
 	}
