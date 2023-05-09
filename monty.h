@@ -55,6 +55,7 @@ int is_num(char *);
 
 void push(stack_t **, unsigned int);
 void pall(stack_t **, unsigned int);
+void pint(stack_t **, unsigned int);
 void opcode(stack_t **, char *, unsigned int);
 
 #endif
