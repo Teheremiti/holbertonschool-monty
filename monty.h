@@ -53,6 +53,8 @@ global_t global;
 void free_stack(stack_t *);
 int is_num(char *);
 
+void pop(stack_t **top, unsigned int i);
+
 void push(stack_t **, unsigned int);
 void pall(stack_t **, unsigned int);
 void pint(stack_t **, unsigned int);
