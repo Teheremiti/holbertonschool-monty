@@ -25,7 +25,7 @@ void free_stack(stack_t *top)
  *
  * @str: String to check
  *
- * Return: 1 if there is a character other than a digit, otherwise 0
+ * Return: 0 if there is a character other than a digit, otherwise 1
  */
 
 int is_num(char *str)
@@ -34,7 +34,7 @@ int is_num(char *str)
 
 	for (i = 0; str[i]; i++)
 		if (str[i] < '0' || str[i] > '9')
-			return (1);
+			return (0);
 
-	return (0);
+	return (1);
 }

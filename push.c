@@ -11,13 +11,21 @@
 
 void push(stack_t **top, unsigned int line)
 {
-	char *num = global.arg;
+	char *num;
 	stack_t *new = NULL;
 
+	if (global.arg == NULL)
+	{
+		free_stack(*top);
+		fprintf(stderr, "L%d: usage: push integer\n", line);
+		exit(EXIT_FAILURE);
+	}
+
+	num = global.arg;
 	if (*num == '-')
 		num++;
 
-	if (num == NULL || is_num(num))
+	if (!is_num(num))
 	{
 		free_stack(*top);
 		fprintf(stderr, "L%d: usage: push integer\n", line);
