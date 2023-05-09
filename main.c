@@ -7,7 +7,7 @@
  * @ac: Argument count
  * @av: Argument vector
  *
- * Return: 0 on SUCCESS
+ * Return: 0 on SUCCESS, otherwise nothing and exit with status EXIT_FAILURE
  */
 
 int main(int ac, char **av)
@@ -45,5 +45,9 @@ int main(int ac, char **av)
 	free(buffer);
 	free_stack(top);
 	fclose(fd);
+
+	if (global.status)
+		exit(global.status);
+
 	return (0);
 }

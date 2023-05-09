@@ -18,7 +18,8 @@ void push(stack_t **top, unsigned int line)
 	{
 		free_stack(*top);
 		fprintf(stderr, "L%d: usage: push integer\n", line);
-		exit(EXIT_FAILURE);
+		global.status = EXIT_FAILURE;
+		return;
 	}
 
 	num = global.arg;
@@ -29,7 +30,8 @@ void push(stack_t **top, unsigned int line)
 	{
 		free_stack(*top);
 		fprintf(stderr, "L%d: usage: push integer\n", line);
-		exit(EXIT_FAILURE);
+		global.status = EXIT_FAILURE;
+		return;
 	}
 
 	new = malloc(sizeof(stack_t));
@@ -37,7 +39,8 @@ void push(stack_t **top, unsigned int line)
 	{
 		free_stack(*top);
 		fprintf(stderr, "Error: malloc failed\n");
-		exit(EXIT_FAILURE);
+		global.status = EXIT_FAILURE;
+		return;
 	}
 
 	new->n = atoi(num);

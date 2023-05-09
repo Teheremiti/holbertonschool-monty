@@ -46,6 +46,7 @@ typedef struct instruction_s
 typedef struct global_s
 {
 	char *arg;
+	int status;
 } global_t;
 
 global_t global;
