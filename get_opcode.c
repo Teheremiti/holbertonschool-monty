@@ -29,6 +29,9 @@ void opcode(stack_t **top, char *arg, unsigned int line)
 		{NULL, NULL}
 	};
 
+	if (*arg == '#')
+		return;
+
 	for (i = 0; op[i].opcode; i++)
 	{
 		if (strcmp(op[i].opcode, arg) == 0)

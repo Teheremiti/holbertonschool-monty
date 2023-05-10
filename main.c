@@ -39,6 +39,8 @@ int main(int ac, char **av)
 		if (op)
 			opcode(&top, op, line);
 
+		if (global.status)
+			break;
 		line++;
 	}
 
