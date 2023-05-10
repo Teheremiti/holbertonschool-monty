@@ -14,7 +14,7 @@ void rotl(stack_t **top, unsigned int line)
 	if (*top == NULL || (*top)->next == NULL)
 		return;
 	input = (*top)->next;
-	(*top)->next = NULL;
+	input->prev = NULL;
 
 	while (tmp->next != NULL)
 	{
