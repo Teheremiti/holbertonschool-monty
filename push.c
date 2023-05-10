@@ -1,7 +1,5 @@
 #include "monty.h"
 
-global_t global = {NULL};
-
 /**
  * push - Insert an element into the stack
  *
