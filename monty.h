@@ -49,7 +49,7 @@ typedef struct global_s
 	int status;
 } global_t;
 
-global_t global;
+extern global_t global;
 
 void free_stack(stack_t *);
 int is_num(char *);
@@ -62,5 +62,6 @@ void swap(stack_t **, unsigned int);
 void add(stack_t **, unsigned int);
 void nop(stack_t **, unsigned int);
 void opcode(stack_t **, char *, unsigned int);
+void swap(stack_t **top, unsigned int i);
 
 #endif
