@@ -26,7 +26,7 @@ void mod(stack_t **top, unsigned int line)
 			}
 
 			next = (*top)->next;
-			next->n /= (*top)->n;
+			next->n %= (*top)->n;
 
 			tmp = *top;
 			*top = tmp->next;
