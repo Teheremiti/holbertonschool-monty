@@ -35,6 +35,6 @@ void mod(stack_t **top, unsigned int line)
 		}
 	}
 
-	fprintf(stderr, "L%d: can't div, stack too short\n", line);
+	fprintf(stderr, "L%d: can't mod, stack too short\n", line);
 	global.status = EXIT_FAILURE;
 }
