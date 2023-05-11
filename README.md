@@ -81,3 +81,7 @@ julien@ubuntu:~/monty$ ./monty bytecodes/00.m
 1
 julien@ubuntu:~/monty$
 ```
+# project made by:
+Teheremiti - [Github](https://github.com/Teheremiti)<br/>
+zidani - [Github](https://github.com/samdaphbynet)
+
