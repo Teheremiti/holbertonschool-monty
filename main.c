@@ -1,5 +1,4 @@
 #include "monty.h"
-#include <fcntl.h>
 
 /**
  * main - Monty bytecodes files interpreter
@@ -31,6 +30,7 @@ int main(int ac, char **av)
 		exit(EXIT_FAILURE);
 	}
 
+	global.format = 0;
 	while (getline(&buffer, &byteCount, fd) != -1)
 	{
 		op = strtok(buffer, " $\n");
@@ -43,7 +43,6 @@ int main(int ac, char **av)
 			break;
 		line++;
 	}
-
 	free(buffer);
 	free_stack(top);
 	fclose(fd);

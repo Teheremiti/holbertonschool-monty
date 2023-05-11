@@ -47,12 +47,16 @@ typedef struct global_s
 {
 	char *arg;
 	int status;
+	int format;
 } global_t;
 
 global_t global;
 
 void free_stack(stack_t *);
 int is_num(char *);
+void push_node(stack_t **, char *);
+void enqueue(stack_t **, char *);
+void opcode(stack_t **, char *, unsigned int);
 
 void push(stack_t **, unsigned int);
 void pall(stack_t **, unsigned int);
@@ -65,11 +69,12 @@ void sub(stack_t **, unsigned int);
 void _div(stack_t **, unsigned int);
 void mul(stack_t **, unsigned int);
 void mod(stack_t **, unsigned int);
-void opcode(stack_t **, char *, unsigned int);
-void swap(stack_t **top, unsigned int i);
-void pchar(stack_t **top, unsigned int line);
-void pstr(stack_t **top, unsigned int line);
-void rotl(stack_t **top, unsigned int line);
-void rotr(stack_t **top, unsigned int line);
+void swap(stack_t **, unsigned int);
+void pchar(stack_t **, unsigned int);
+void pstr(stack_t **, unsigned int);
+void rotl(stack_t **, unsigned int);
+void rotr(stack_t **, unsigned int);
+void stack(stack_t **, unsigned int);
+void queue(stack_t **, unsigned int);
 
 #endif
