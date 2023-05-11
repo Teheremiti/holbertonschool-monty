@@ -13,11 +13,10 @@ void pstr(stack_t **top, unsigned int line)
 
 	while (tmp)
 	{
-		if (tmp->n < 'A' || tmp->n > 'Z'
-				 || tmp->n < 'a' || tmp->n > 'z')
-		{
+		int isNotLetter = (tmp->n < 'A' || tmp->n > 'Z') &&
+			 (tmp->n < 'a' || tmp->n > 'z');
+		if (isNotLetter)
 			break;
-		}
 
 		putchar((char) tmp->n);
 		tmp = tmp->next;

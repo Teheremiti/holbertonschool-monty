@@ -18,8 +18,8 @@ void pchar(stack_t **top, unsigned int line)
 		return;
 	}
 
-	isNotLetter = (*top)->n < 'A' || (*top)->n > 'Z' ||
-		 (*top)->n < 'a' || (*top)->n > 'z';
+	isNotLetter = ((*top)->n < 'A' || (*top)->n > 'Z') &&
+		 ((*top)->n < 'a' || (*top)->n > 'z');
 	if (isNotLetter)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line);
