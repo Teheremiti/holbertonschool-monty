@@ -83,5 +83,5 @@ julien@ubuntu:~/monty$
 ```
 # project made by:
 Teheremiti - [Github](https://github.com/Teheremiti)<br/>
-zidani - [Github](https://github.com/samdaphbynet)
+Zidani - [Github](https://github.com/samdaphbynet)
 
