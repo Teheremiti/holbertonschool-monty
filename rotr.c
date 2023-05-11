@@ -13,13 +13,13 @@ void rotr(stack_t **top, unsigned int line)
 
 	if (*top == NULL || (*top)->next == NULL)
 		return;
-	while (tmp->next)
+	while (tmp->next != NULL)
 	{
 		tmp = tmp->next;
 	}
-	tmp->next = *top;
 	tmp->prev->next = NULL;
+	tmp->next = *top;
 	tmp->prev = NULL;
-	(*top)->next = tmp;
+	(*top)->prev = tmp;
 	(*top) = tmp;
 }
