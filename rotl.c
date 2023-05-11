@@ -2,7 +2,7 @@
 
 /**
  * rotl - function that rotates the stack to the top.
- * @top: head of structure 
+ * @top: head of structure
  * @line: number of line
  */
 
