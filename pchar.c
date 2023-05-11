@@ -9,17 +9,22 @@
 
 void pchar(stack_t **top, unsigned int line)
 {
+	int isNotLetter;
+
 	if (!*top)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", line);
 		global.status = EXIT_FAILURE;
 		return;
 	}
-	if (isascii((*top)->n) == 0)
+
+	isNotLetter = (*top)->n < 'A' || (*top)->n > 'Z' ||
+		 (*top)->n < 'a' || (*top)->n > 'z';
+	if (isNotLetter)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line);
 		global.status = EXIT_FAILURE;
 		return;
 	}
-	printf("%c\n",(char)(*top)->n);
+	printf("%c\n", (char)(*top)->n);
 }
